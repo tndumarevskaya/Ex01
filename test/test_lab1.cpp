@@ -2,14 +2,20 @@
 
 #include "gtest/gtest.h"
 
-TEST(task1, granted1)
+TEST(task1, test1)
 {
-    ASSERT_EQ(1,ageCheck(18));
+    ASSERT_EQ(3571,getPrime(500));
 
 }
 
-TEST(task1, denied1)
+TEST(task1, test2)
 {
-    ASSERT_EQ(0,ageCheck(17));
+     ASSERT_EQ(2,getPrime(1));
+	
+}
+
+TEST(task1, test3)
+{
+     ASSERT_EQ(3,getPrime(2));
 	
 }
