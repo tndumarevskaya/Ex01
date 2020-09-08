@@ -5,23 +5,26 @@ using namespace std;
 
 unsigned int getPrime(unsigned int n)
 {
-	int m = 0;
-	int k = 1;
-	while (m != n)
+	if (n == 0)
+		return 1;
+	else if (n == 1)
+		return 2;
+	else
 	{
-		int del = 0;
-		for (int i = 1; i <= k / 2; i++)
+		n--;
+		int k = 2;
+		while (n != 0)
 		{
-			if (n % i == 0)
-				del++;
-			if (del == 1)
+			k++;
+			bool isPrime = true;
+			for (int i = 2; i < k; i++)
 			{
-				m++;
-				if (m == n)
-					return k;
+				if (k % i == 0)
+					isPrime = false;
 			}
+			if (isPrime)
+				n--;
 		}
-		k++;
+		return k;
 	}
-
 }
